@@ -1,0 +1,33 @@
+{
+  "name": "campusfind-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CampusFind Express API — thin layer over PostgreSQL business logic",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:setup": "node scripts/dbSetup.js",
+    "db:reset": "node scripts/dbSetup.js --reset",
+    "db:test": "node scripts/dbTest.js",
+    "test:api": "node scripts/apiTest.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.3",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.5.0",
+    "pg": "^8.23.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  }
+}

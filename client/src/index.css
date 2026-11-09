@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-forest-950: #0c241c;
+  --color-forest-900: #12322a;
+  --color-forest-800: #1d4a3a;
+  --color-forest-700: #27604b;
+  --color-forest-600: #33765d;
+  --color-forest-100: #dcebe3;
+  --color-cream: #faf6ec;
+  --color-cream-dark: #f1ead8;
+  --color-gold: #c9a54a;
+  --color-gold-light: #e8c96a;
+  --color-mint: #d8efe3;
+}
+
+body { @apply bg-cream text-forest-950 font-sans antialiased; }
+
+@utility card {
+  @apply bg-white rounded-2xl border border-cream-dark shadow-sm;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer;
+}
+@utility btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer bg-forest-800 text-white hover:bg-forest-700;
+}
+@utility btn-gold {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer bg-gold text-forest-950 hover:bg-gold-light;
+}
+@utility btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer border border-forest-800/25 text-forest-800 bg-white hover:bg-mint;
+}
+@utility btn-danger {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer bg-red-700 text-white hover:bg-red-600;
+}
+@utility btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer text-forest-800 hover:bg-mint;
+}
+@utility btn-sm {
+  @apply px-3! py-1.5! text-xs! rounded-lg!;
+}
+@utility input {
+  @apply w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-sm outline-none focus:border-forest-600 focus:ring-2 focus:ring-forest-100;
+}
+@utility label {
+  @apply block text-sm font-medium text-forest-900 mb-1;
+}
+@utility th {
+  @apply text-left text-xs font-semibold uppercase tracking-wide text-stone-500 px-4 py-3;
+}
+@utility td {
+  @apply px-4 py-3 text-sm border-t border-cream-dark align-top;
+}

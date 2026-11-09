@@ -1,0 +1,22 @@
+# Dependencies and builds
+node_modules/
+dist/
+coverage/
+
+# Secrets: never commit real environment files or keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private uploads (item photos, evidence, proofs); keep only the folder
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs, OS and editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
